@@ -17,6 +17,7 @@ class _HomeState extends State<Home> {
   void _changePeople(int delta) {
     setState(() {
       _people += delta;
+
       if (_people < 0) {
         _infoText = "Mundo invertido?!";
       } else if (_people <= 10) {
@@ -72,7 +73,7 @@ class _HomeState extends State<Home> {
               ],
             ),
             Text(
-              "Pode Entrar!",
+              _infoText,
               style: TextStyle(
                   color: Colors.white,
                   fontStyle: FontStyle.italic,
